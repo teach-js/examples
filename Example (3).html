@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+    </style>
+    <script>
+        function hideAndShow(hideTag, showTag) {
+            hideTag.style.display = "none";
+            document.getElementById(showTag).style.display = "unset";
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn1" onmouseenter="hideAndShow(this, 'btn2')">
+        Do you want to know the meaning of life? Click me!
+    </button>
+    <br>
+    <br>
+    <button id="btn2" style="display: none;"  onmouseenter="hideAndShow(this, 'btn1')">
+        Do you want to know the meaning of life? Click me!
+    </button>
+</body>
+
+</html>

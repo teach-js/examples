@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .lamp.container {
+            width: 200px;
+            height: 300px;
+            float: both;
+            margin: 100px auto;
+        }
+        .lamp-top {
+          width: 200px;
+          height: 100px;
+          background-color: wheat;
+          border-radius: 200% 200% 0 0;
+        }
+
+        .turn-on {
+          box-shadow: 0px 0px 20px yellow;
+        }
+        
+        .lamp.top {
+          width: 200px;
+          height: 100px;
+          background-color: wheat;
+          border-radius: 200% 200% 0 0;
+        }
+        .lamp.body {
+            width: 200px;
+            height: 100px;
+            background-color: darkgrey;
+            border-radius:0 0 200px 200px;
+        }
+        .lamp.bottom {
+            width: 50px;
+            height: 100px;
+            background-color: darkgrey;
+            border-radius:0 0 200px 200px;
+            float: both;
+            margin: -5px auto;   
+        }
+
+        .btn{
+            border-radius: 5px;
+            border: solid red 1px;
+            padding: 10px;
+            min-width: 150px;
+        }
+        .on{
+            background-color: green;
+        }
+        .off{
+            background-color: red;
+        }
+    </style>
+    <script>
+        function turnon(){
+            document.getElementById("cheragh")
+                .classList.add("turn-on")
+        }
+
+        function turnoff(){
+            document.getElementById("cheragh")
+                .classList.remove("turn-on")
+        }
+    </script>
+</head>
+
+<body style="background-color: #222">
+    <div class="lamp container">
+        <div id="cheragh" class="lamp top"></div>
+        <div class="lamp body"></div>
+        <div class="lamp bottom"></div>
+    </div>
+    <button class="btn on" onclick="turnon()">On</button>
+    <button class="btn off" onclick="turnoff()">Off</button>
+</body>
+
+</html>

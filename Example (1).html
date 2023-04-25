@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        .btn{
+            margin: 5px;
+            padding: 3px;
+            border-radius: 2px;
+            background-color: burlywood;
+            text-align: center;
+            border: solid 1px gray;
+        }
+        .btn:hover{
+            background-color: coral;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        
+        function Say_Hello(){
+            const x = document.getElementById("name").value
+            document.getElementById("ali").innerHTML = "Hello " + x 
+            
+            var divs = document.getElementsByTagName("div")
+            for(let i = 0; i < divs.length; i++) {
+                divs[i].style.border = "solid 10px red"
+                divs[i].style.margin = "5px"
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <p>
+        What's your name?
+    </p>
+    <input type="text" id="name"/>
+    <div class="btn" onclick="Say_Hello()">Say hello</div>
+    <p id="ali"></p>
+
+    <div  class="a">Ali</div>
+    <div class="a">Hassan</div>
+    <div class="a">Esi</div>
+
+</body>
+</html>
